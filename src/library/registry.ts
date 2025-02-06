@@ -1,4 +1,3 @@
-
 import { Builder } from '@builder.io/sdk';
 import { PageWrapper } from "./PageWrapper";
 import { Section } from "./Section";
@@ -38,7 +37,6 @@ Builder.registerComponent(Image, {
     {
       name: "src",
       type: "string",
-      defaultValue: "https://via.placeholder.com/150",
     },
     { name: "alt", type: "string", defaultValue: "Image description" },
   ],
