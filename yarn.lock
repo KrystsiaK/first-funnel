@@ -182,6 +182,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@builder.io/sdk@npm:^6.0.4":
+  version: 6.0.4
+  resolution: "@builder.io/sdk@npm:6.0.4"
+  dependencies:
+    hash-sum: "npm:^2.0.0"
+    node-fetch: "npm:^2.3.0"
+    tslib: "npm:^1.10.0"
+  checksum: 10c0/6aeecef5216a3c897cbe1f899f9ba257d5899c42b97af0dacbf6f047387eb355eb3875911970ffcfef282e1bd2488f19899a9f4c1527dc5d67e62d7bc3edcc5a
+  languageName: node
+  linkType: hard
+
 "@colors/colors@npm:1.5.0":
   version: 1.5.0
   resolution: "@colors/colors@npm:1.5.0"
@@ -7938,6 +7949,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hash-sum@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "hash-sum@npm:2.0.0"
+  checksum: 10c0/45dee9cf318d7a9b0ba5f766d35bfa14eb9483f9b878b1f980f097a87c2a490219774d42962c0c5c9bf53b1cca51724307bc35a0781218236da3d33715b4962d
+  languageName: node
+  linkType: hard
+
 "hasha@npm:5.2.2":
   version: 5.2.2
   resolution: "hasha@npm:5.2.2"
@@ -10669,6 +10687,7 @@ __metadata:
   dependencies:
     "@builder.io/qwik": "npm:^1.12.0"
     "@builder.io/qwik-city": "npm:^1.12.0"
+    "@builder.io/sdk": "npm:^6.0.4"
     "@builder.io/sdk-qwik": "npm:^0.17.8"
     "@netlify/edge-functions": "npm:^2.0.0"
     "@types/eslint": "npm:8.56.10"
@@ -11013,7 +11032,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.7":
+"node-fetch@npm:^2.3.0, node-fetch@npm:^2.6.7":
   version: 2.7.0
   resolution: "node-fetch@npm:2.7.0"
   dependencies:
@@ -14655,7 +14674,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.8.1, tslib@npm:^1.9.0":
+"tslib@npm:^1.10.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: 10c0/69ae09c49eea644bc5ebe1bca4fa4cc2c82b7b3e02f43b84bd891504edf66dbc6b2ec0eef31a957042de2269139e4acff911e6d186a258fb14069cd7f6febce2
