@@ -14,7 +14,6 @@ export interface CoreProps {
 export const CoreContext = createContextId<CoreProps>("core-context");
 
 export const PageWrapper = component$((props: CoreProps) => {
-  // Предоставляем контекст для всех вложенных компонентов
   useContextProvider(CoreContext, props);
   return (
     <div class="min-h-screen">
