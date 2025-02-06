@@ -3,6 +3,7 @@ import { PageWrapper } from "./PageWrapper";
 import { Section } from "./Section";
 import { Button } from "./Button";
 import { Text } from "./Text";
+import { Image } from "./Image";
 
 Builder.registerComponent(PageWrapper, {
   name: "PageWrapper",
@@ -30,3 +31,13 @@ Builder.registerComponent(Text, {
   inputs: [{ name: "content", type: "string", defaultValue: "Sample text" }],
 });
 
+Builder.registerComponent(Image, {
+  name: "Image",
+  inputs: [
+    {
+      name: "src",
+      type: "string",
+    },
+    { name: "alt", type: "string", defaultValue: "Image description" },
+  ],
+});
