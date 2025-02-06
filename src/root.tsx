@@ -1,3 +1,4 @@
+import './library/registry';
 import { component$ } from "@builder.io/qwik";
 import {
   QwikCityProvider,
