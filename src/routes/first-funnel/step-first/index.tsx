@@ -6,16 +6,11 @@ import {
   getBuilderSearchParams,
 } from "@builder.io/sdk-qwik";
 
-// Define Builder's public API key and content model.
-// TO DO: Replace with your Public API Key
 export const BUILDER_PUBLIC_API_KEY = "00cc8946c86443c8a4af1c7c54e94b11";
 export const BUILDER_MODEL = "page";
 
-// Define a route loader function that loads
-// content from Builder based on the URL.
-export const useBuilderContent = routeLoader$(async ({ url, error }) => {
-  // Fetch content for the specified model using the API key.
-  const builderContent = await fetchOneEntry({
+export const useBuilderContent = routeLoader$(async ({ url }) => {
+  return await fetchOneEntry({
     model: BUILDER_MODEL,
     apiKey: BUILDER_PUBLIC_API_KEY,
     options: getBuilderSearchParams(url.searchParams),
@@ -23,18 +18,11 @@ export const useBuilderContent = routeLoader$(async ({ url, error }) => {
       urlPath: url.pathname,
     },
   });
-
-  // Return the fetched content.
-  return builderContent;
 });
 
-// Define a component that renders Builder content
-// using Qwik's Content component.
 export default component$(() => {
-  // Call the useBuilderContent function to get the content.
   const content = useBuilderContent();
-  // Specify the content model, pass the fetched content,
-  // and provide the Public API Key
+
   return (
     <Content
       model={BUILDER_MODEL}
