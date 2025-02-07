@@ -1,9 +1,9 @@
-import type { RegisteredComponent } from "@builder.io/sdk-qwik";
-import { Button } from "~/library/Button";
 import { Image } from "~/library/Image";
 import { PageWrapper } from "~/library/PageWrapper";
+import type { RegisteredComponent } from "@builder.io/sdk-qwik";
 import { Section } from "~/library/Section";
 import { Text } from "~/library/Text";
+import { Button } from "~/library/Button";
 
 /**
  * This array is used to integrate custom components within Builder.
@@ -16,6 +16,17 @@ import { Text } from "~/library/Text";
  * https://www.builder.io/c/docs/guides/components-only-mode
  */
 export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
+  {
+    component: Button,
+    name: "Button",
+    inputs: [
+      {
+        name: "label",
+        type: "string",
+        required: true,
+      },
+    ],
+  },
   {
     component: Button,
     name: "Button",
