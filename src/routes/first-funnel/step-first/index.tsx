@@ -5,6 +5,7 @@ import {
   Content,
   getBuilderSearchParams,
 } from "@builder.io/sdk-qwik";
+import {CUSTOM_COMPONENTS} from "~/components/builder-registry";
 
 export const BUILDER_PUBLIC_API_KEY = "00cc8946c86443c8a4af1c7c54e94b11";
 export const BUILDER_MODEL = "page";
@@ -28,6 +29,7 @@ export default component$(() => {
       model={BUILDER_MODEL}
       content={content.value}
       apiKey={BUILDER_PUBLIC_API_KEY}
+      customComponents={CUSTOM_COMPONENTS}
     />
   );
 });
