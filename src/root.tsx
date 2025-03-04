@@ -5,17 +5,9 @@ import {
   ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
 import { isDev } from "@builder.io/qwik";
-
 import "./global.css";
 
 export default component$(() => {
-  /**
-   * The root of a QwikCity site always start with the <QwikCityProvider> component,
-   * immediately followed by the document's <head> and <body>.
-   *
-   * Don't remove the `<head>` and `<body>` elements.
-   */
-
   return (
     <QwikCityProvider>
       <head>
@@ -28,7 +20,26 @@ export default component$(() => {
         )}
       </head>
       <body lang="en">
-        <RouterOutlet />
+        <div class="min-h-screen">
+          <main>
+            <h1 class="py-4 text-center text-2xl font-bold">Воронка</h1>
+            <div class="mb-4 flex justify-center gap-4">
+              <a
+                href="/step1"
+                class="rounded bg-blue-500 p-2 text-white hover:bg-blue-600"
+              >
+                Шаг 1
+              </a>
+              <a
+                href="/step2"
+                class="rounded bg-blue-500 p-2 text-white hover:bg-blue-600"
+              >
+                Шаг 2
+              </a>
+            </div>
+            <RouterOutlet />
+          </main>
+        </div>
         {!isDev && <ServiceWorkerRegister />}
       </body>
     </QwikCityProvider>
